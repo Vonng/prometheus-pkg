@@ -16,38 +16,38 @@ rpm:
 
 contents:
 
-# 2 binary files
-- src: alertmanager/alertmanager
-  dst: /usr/bin/alertmanager
-  file_info:
-    mode: 0755
+  # 2 binary files
+  - src: alertmanager/alertmanager
+    dst: /usr/bin/alertmanager
+    file_info:
+      mode: 0755
 
-- src: alertmanager/amtool
-  dst: /usr/bin/amtool
-  file_info:
-    mode: 0755
+  - src: alertmanager/amtool
+    dst: /usr/bin/amtool
+    file_info:
+      mode: 0755
 
 
-# 3 Config files
-- src: alertmanager/alertmanager.yml
-  dst: /etc/alertmanager.yml
-  type: config|noreplace
-  file_info:
-    mode: 0700
-    owner: prometheus
-    group: prometheus
+  # 3 Config files
+  - src: alertmanager/alertmanager.yml
+    dst: /etc/alertmanager.yml
+    type: config|noreplace
+    file_info:
+      mode: 0700
+      owner: prometheus
+      group: prometheus
 
-- src: src/alertmanager.default
-  dst: /etc/default/alertmanager
-  type: config|noreplace
-  file_info:
-    mode: 0700
-    owner: prometheus
-    group: prometheus
+  - src: src/alertmanager.default
+    dst: /etc/default/alertmanager
+    type: config|noreplace
+    file_info:
+      mode: 0700
+      owner: prometheus
+      group: prometheus
 
-- src: src/alertmanager.service
-  dst: /usr/lib/systemd/system/alertmanager.service
-  type: config|noreplace
+  - src: src/alertmanager.service
+    dst: /usr/lib/systemd/system/alertmanager.service
+    type: config|noreplace
 
 
 scripts:
