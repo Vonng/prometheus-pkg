@@ -1,18 +1,21 @@
 dist/
+
+prometheus-pkg.iml
 .idea/
 .code/
 .DS_Store
+tmp/
 
 tarball/*.tar.gz
 repodata/
 modules.yaml
 
-deb/
-
-prometheus-pkg.iml
-
 prometheus/prometheus
-alertmanager/alertmanager*
-pushgateway/pushgateway*
+prometheus/prometheus*.tar.gz
 
-tmp/
+alertmanager/alertmanager
+alertmanager/alertmanager*.tar.gz
+
+pushgateway/pushgateway*
+pushgateway/pushgateway*.tar.gz
+
