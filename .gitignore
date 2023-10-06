@@ -36,3 +36,9 @@ nginx_exporter/nginx_exporter*.tar.gz
 
 keepalived_exporter/keepalived_exporter
 keepalived_exporter/keepalived_exporter*.tar.gz
+
+mongodb_exporter/mongodb_exporter
+mongodb_exporter/mongodb_exporter*.tar.gz
+
+kafka_exporter/kafka_exporter
+kafka_exporter/kafka_exporter*.tar.gz
