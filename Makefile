@@ -33,9 +33,10 @@ kafka_exporter:
 	cd kafka_exporter && make
 pg_exporter:
 	cd pg_exporter && make
-
+victoria-metrics:
+	cd victoria-metrics && make
 publish:
-	package_cloud push pigsty/prometheus-pkg/el/8 dist/rpm/*.rpm
-	package_cloud push pigsty/prometheus-pkg/ubuntu/jammy dist/deb/*.deb
+	# package_cloud push pigsty/prometheus/el/8 dist/rpm/*.rpm
+	package_cloud push pigsty/prometheus/ubuntu/jammy dist/deb/*.deb
 
-.PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter
+.PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter victoria-metrics publish

@@ -1,4 +1,4 @@
-name: "prometheus"
+name: "prometheus2"
 arch: "amd64"
 platform: "linux"
 version: "v2.47.1"
