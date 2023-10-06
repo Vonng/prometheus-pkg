@@ -39,4 +39,11 @@ publish:
 	# package_cloud push pigsty/prometheus/el/8 dist/rpm/*.rpm
 	package_cloud push pigsty/prometheus/ubuntu/jammy dist/deb/*.deb
 
+check:
+	rsync -avz --delete dist/ sv:/data/prometheus-pkg
+	ssh sv 'ssh ubuntu22 mkdir -p /tmp/prometheus'
+	ssh sv 'ssh rocky8   mkdir -p /tmp/prometheus'
+	ssh sv 'rsync -avz /data/prometheus-pkg/deb/ ubuntu22:/tmp/prometheus/'
+	ssh sv 'rsync -avz /data/prometheus-pkg/rpm/ rocky8:/tmp/prometheus/'
+
 .PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter victoria-metrics publish
