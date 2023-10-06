@@ -32,7 +32,7 @@ contents:
       group: prometheus
 
   - src: src/service
-    dst: /lib/systemd/system/pushgateway.service
+    dst: /usr/lib/systemd/system/pushgateway.service
     type: config|noreplace
 
 

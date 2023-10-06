@@ -39,8 +39,8 @@ contents:
     type: config|noreplace
     file_info:
       mode: 0700
-      owner: root
-      group: root
+      owner: prometheus
+      group: prometheus
 
   - src: src/service
     dst: /usr/lib/systemd/system/pg_exporter.service
