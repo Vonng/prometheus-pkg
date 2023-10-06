@@ -1,6 +1,14 @@
 #!/bin/sh
 
-if [ -n "$1" ] && [ $1 -eq 1 ] ; then
-        # Initial installation
+# Handle script parameters
+case "$1" in
+    configure|1)
+        # newly installed
         systemctl --no-reload preset alertmanager.service &>/dev/null || :
-fi
+        ;;
+    *)
+        exit 0
+        ;;
+esac
+
+exit 0

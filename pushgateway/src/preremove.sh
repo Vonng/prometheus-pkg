@@ -1,6 +1,12 @@
 #!/bin/sh
 
-if [ -n "$1" ] && [ $1 -eq 0 ] ; then
-        # Package removal, not upgrade
+case "$1" in
+    remove|0)
         systemctl --no-reload disable --now pushgateway.service &>/dev/null || :
-fi
+        ;;
+    *)
+        exit 0
+        ;;
+esac
+
+exit 0

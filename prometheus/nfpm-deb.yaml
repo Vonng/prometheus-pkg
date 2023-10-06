@@ -70,6 +70,6 @@ contents:
 # add prometheus user/group
 scripts:
   preinstall:  src/preinstall.sh
-  # postinstall: src/postinstall.sh
-  # preremove:   src/preremove.sh
-  # postremove:  src/postremove.sh
+  postinstall: src/postinstall.sh
+  preremove:   src/preremove.sh
+  #postremove:  src/postremove.sh

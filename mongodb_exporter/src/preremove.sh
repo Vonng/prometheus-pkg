@@ -1,6 +1,12 @@
 #!/bin/sh
 
-if [ -n "$1" ] && [ $1 -eq 0 ] ; then
-    # Package removal, not upgrade
-    systemctl --no-reload disable --now mongodb_exporter.service &>/dev/null || :
-fi
+case "$1" in
+    remove|0)
+        systemctl --no-reload disable --now mongodb_exporter.service &>/dev/null || :
+        ;;
+    *)
+        exit 0
+        ;;
+esac
+
+exit 0
