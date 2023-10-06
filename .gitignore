@@ -31,6 +31,9 @@ mysqld_exporter/mysqld_exporter*.tar.gz
 pg_exporter/pg_exporter
 pg_exporter/pg_exporter*.tar.gz
 
+redis_exporter/redis_exporter
+redis_exporter/redis_exporter*.tar.gz
+
 nginx_exporter/nginx_exporter
 nginx_exporter/nginx_exporter*.tar.gz
 

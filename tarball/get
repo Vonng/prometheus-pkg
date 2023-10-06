@@ -81,7 +81,7 @@ download_file https://github.com/prometheus/mysqld_exporter/releases/download/v0
 download_file https://github.com/danielqsj/kafka_exporter/releases/download/v1.7.0/kafka_exporter-1.7.0.linux-amd64.tar.gz                              ${TARBALL_DIR}/kafka_exporter-1.7.0.linux-amd64.tar.gz
 download_file https://github.com/percona/mongodb_exporter/releases/download/v0.39.0/mongodb_exporter-0.39.0.linux-amd64.tar.gz                          ${TARBALL_DIR}/mongodb_exporter-0.39.0.linux-amd64.tar.gz
 download_file https://github.com/gen2brain/keepalived_exporter/releases/download/0.5.0/keepalived_exporter-0.5.0-amd64.tar.gz                           ${TARBALL_DIR}/keepalived_exporter-0.5.0-amd64.tar.gz
-
+download_file https://github.com/oliver006/redis_exporter/releases/download/v1.54.0/redis_exporter-v1.54.0.linux-amd64.tar.gz                           ${TARBALL_DIR}/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 
 #v_prometheus=2.47.1           https://github.com/prometheus/prometheus/releases/download/v${v_prometheus}/prometheus-${v_prometheus}.freebsd-amd64.tar.gz

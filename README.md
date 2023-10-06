@@ -11,7 +11,10 @@
 - [mongodb_exporter](mongodb_exporter/)
 - [kafka_exporter](kafka_exporter/)
 - [pg_exporter](pg_exporter/)
+- [redis_exporter](redis_exporter/)
 
+
+Debian Repo: https://packagecloud.io/pigsty/prometheus
 
 
 ## Build
@@ -60,5 +63,5 @@ DOING
 - [mysqld_exporter](https://github.com/prometheus/mysqld_exporter) : 0.15.0
 - [kafka_exporter](https://github.com/danielqsj/kafka_exporter) : 1.7.0
 - [mongodb_exporter](https://github.com/percona/mongodb_exporter) : 0.39.0
-
+- [redis_exporter](https://github.com/oliver006/redis_exporter) : 1.54.0
 
