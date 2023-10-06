@@ -33,3 +33,6 @@ pg_exporter/pg_exporter*.tar.gz
 
 nginx_exporter/nginx_exporter
 nginx_exporter/nginx_exporter*.tar.gz
+
+keepalived_exporter/keepalived_exporter
+keepalived_exporter/keepalived_exporter*.tar.gz
