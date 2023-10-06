@@ -36,7 +36,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/alertmanager.default
+  - src: src/default
     dst: /etc/default/alertmanager
     type: config|noreplace
     file_info:
@@ -44,7 +44,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/alertmanager.service
+  - src: src/service
     dst: /usr/lib/systemd/system/alertmanager.service
     type: config|noreplace
 

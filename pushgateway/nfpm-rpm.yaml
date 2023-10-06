@@ -23,7 +23,7 @@ contents:
       mode: 0755
 
   # 2 Config files
-  - src: src/pushgateway.default
+  - src: src/default
     dst: /etc/default/pushgateway
     type: config|noreplace
     file_info:
@@ -31,7 +31,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/pushgateway.service
+  - src: src/service
     dst: /lib/systemd/system/pushgateway.service
     type: config|noreplace
 

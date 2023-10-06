@@ -29,7 +29,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/blackbox_exporter.default
+  - src: src/default
     dst: /etc/default/blackbox_exporter
     type: config|noreplace
     file_info:
@@ -37,7 +37,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/blackbox_exporter.service
+  - src: src/service
     dst: /lib/systemd/system/blackbox_exporter.service
     type: config|noreplace
 

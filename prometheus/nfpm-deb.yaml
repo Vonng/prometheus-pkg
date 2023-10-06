@@ -34,6 +34,7 @@ contents:
       owner: prometheus
       group: prometheus
 
+
   # 3 Config files
   - src: prometheus/prometheus.yml
     dst: /etc/prometheus/prometheus.yml
@@ -43,7 +44,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/prometheus.default
+  - src: src/default
     dst: /etc/default/promehteus
     type: config|noreplace
     file_info:
@@ -51,7 +52,7 @@ contents:
       owner: prometheus
       group: prometheus
 
-  - src: src/prometheus.service
+  - src: src/service
     dst: /lib/systemd/system/prometheus.service
     type: config|noreplace
 
