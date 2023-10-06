@@ -4,13 +4,13 @@
 - [alertmanager](alertmanager/)
 - [pushgateway](pushgateway/)
 - [blackbox_exporter](blackbox_exporter/)
-- node_exporter
-- nginx_exporter
-- keepalived_exporter
-- mysqld_exporter
-- mongodb_exporter
-- kafka_exporter
-- pg_exporter
+- [node_exporter](node_exporter/)
+- [nginx_exporter](nginx_exporter/)
+- [keepalived_exporter](keepalived_exporter/)
+- [mysqld_exporter](mysqld_exporter/)
+- [mongodb_exporter](mongodb_exporter/)
+- [kafka_exporter](kafka_exporter/)
+- [pg_exporter](pg_exporter/)
 
 
 

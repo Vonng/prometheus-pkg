@@ -24,3 +24,6 @@ blackbox_exporter/blackbox_exporter*.tar.gz
 
 node_exporter/node_exporter
 node_exporter/node_exporter*.tar.gz
+
+mysqld_exporter/mysqld_exporter
+mysqld_exporter/mysqld_exporter*.tar.gz
