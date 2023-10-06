@@ -4,7 +4,7 @@ platform: "linux"
 version: "v1.6.2"
 version_schema: semver
 description: Prometheus pushgateway
-maintainer: "rh@vonng.com"
+maintainer: Ruohang Feng <rh@vonng.com>
 vendor: "Prometheus"
 homepage: "https://github.com/prometheus/pushgateway"
 license: "Apache-2.0 license"

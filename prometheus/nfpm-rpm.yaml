@@ -4,7 +4,7 @@ platform: "linux"
 version: "v2.47.1"
 version_schema: semver
 description: The Prometheus monitoring system and time series database.
-maintainer: "rh@vonng.com"
+maintainer: Ruohang Feng <rh@vonng.com>
 vendor: "Prometheus"
 homepage: "https://github.com/prometheus/prometheus"
 license: "Apache-2.0 license"

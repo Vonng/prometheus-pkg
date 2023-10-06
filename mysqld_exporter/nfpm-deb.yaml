@@ -4,7 +4,7 @@ platform: "linux"
 version: "v0.15.0"
 version_schema: semver
 description: Prometheus exporter for MySQL server metrics.
-maintainer: "rh@vonng.com"
+maintainer: Ruohang Feng <rh@vonng.com>
 vendor: "Prometheus"
 homepage: "https://github.com/prometheus/mysqld_exporter"
 license: "Apache-2.0 license"

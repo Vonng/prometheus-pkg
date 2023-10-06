@@ -4,7 +4,7 @@ platform: "linux"
 version: "v0.26.0"
 version_schema: semver
 description: Prometheus Alertmanager
-maintainer: "rh@vonng.com"
+maintainer: Ruohang Feng <rh@vonng.com>
 vendor: "Prometheus"
 homepage: "https://github.com/prometheus/alertmanager"
 license: "Apache-2.0 license"
