@@ -1,4 +1,4 @@
-name: "keepalived_exporter"
+name: "keepalived-exporter"
 arch: "amd64"
 platform: "linux"
 version: "v0.5.0"

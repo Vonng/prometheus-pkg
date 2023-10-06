@@ -1,4 +1,4 @@
-name: "mongodb_exporter"
+name: "mongodb-exporter"
 arch: "amd64"
 platform: "linux"
 version: "v0.39.0"

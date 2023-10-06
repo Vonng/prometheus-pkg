@@ -1,4 +1,4 @@
-name: "blackbox_exporter"
+name: "blackbox-exporter"
 arch: "amd64"
 platform: "linux"
 version: "v0.24.0"

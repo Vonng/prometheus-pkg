@@ -1,4 +1,4 @@
-name: "nginx_exporter"
+name: "nginx-exporter"
 arch: "amd64"
 platform: "linux"
 version: "v0.11.0"

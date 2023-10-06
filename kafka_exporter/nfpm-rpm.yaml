@@ -1,4 +1,4 @@
-name: "kafka_exporter"
+name: "kafka-exporter"
 arch: "amd64"
 platform: "linux"
 version: "v1.7.0"

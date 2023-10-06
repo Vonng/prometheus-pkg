@@ -9,7 +9,7 @@
 
 
 default: build
-build: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter victoria-metrics
+build: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter victoria-metrics
 
 prometheus:
 	cd prometheus && make
@@ -33,6 +33,8 @@ kafka_exporter:
 	cd kafka_exporter && make
 pg_exporter:
 	cd pg_exporter && make
+redis_exporter:
+	cd redis_exporter && make
 victoria-metrics:
 	cd victoria-metrics && make
 publish:
