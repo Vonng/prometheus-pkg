@@ -27,7 +27,6 @@ contents:
     file_info:
       mode: 0755
 
-
   # 3 Config files
   - src: alertmanager/alertmanager.yml
     dst: /etc/alertmanager.yml
@@ -51,7 +50,7 @@ contents:
 
 
 scripts:
-  preinstall:  src/preinstall.sh
+  preinstall: src/preinstall.sh
   postinstall: src/postinstall.sh
-  preremove:   src/preremove.sh
+  preremove: src/preremove.sh
   # postremove:  src/postremove.sh

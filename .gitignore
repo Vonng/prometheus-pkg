@@ -19,3 +19,8 @@ alertmanager/alertmanager*.tar.gz
 pushgateway/pushgateway*
 pushgateway/pushgateway*.tar.gz
 
+blackbox_exporter/blackbox_exporter
+blackbox_exporter/blackbox_exporter*.tar.gz
+
+node_exporter/node_exporter
+node_exporter/node_exporter*.tar.gz

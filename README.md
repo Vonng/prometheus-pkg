@@ -2,8 +2,8 @@
 
 - [prometheus](prometheus/)
 - [alertmanager](alertmanager/)
-- pushgateway
-- blackbox_exporter
+- [pushgateway](pushgateway/)
+- [blackbox_exporter](blackbox_exporter/)
 - node_exporter
 - nginx_exporter
 - keepalived_exporter
@@ -15,6 +15,8 @@
 
 
 ## Build
+
+Install `nfpm` first, then get tarball files with `tarball/get`, finally build with `make` one by one, the output will be created in `dist` dir.
 
 ```bash
 prometheus/prometheus               : 2.47.1
@@ -28,6 +30,20 @@ prometheus/mysqld_exporter          : 0.15.0
 danielqsj/kafka_exporter            : 1.7.0
 percona/mongodb_exporter            : 0.39.0
 gen2brain/keepalived_exporter       : 0.5.0
+```
+
+```bash
+cd prometheus          && make
+cd alertmanager        && make
+cd pushgateway         && make
+cd blackbox_exporter   && make
+cd node_exporter       && make
+cd keepalived_exporter && make
+cd nginx_exporter      && make
+cd pg_exporter         && make
+cd mysqld_exporter     && make
+cd kafka_exporter      && make
+cd mongodb_exporter    && make
 ```
 
 
