@@ -9,16 +9,18 @@
 REPONAME=VictoriaMetrics/VictoriaMetrics
 PACKAGE=victoria-metrics
 VERSION=1.94.0
+VMLOG_VERSION=0.4.1
+
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 FILENAME1=victoria-metrics-linux-amd64-v$(VERSION).tar.gz
 FILENAME2=victoria-metrics-linux-amd64-v$(VERSION)-cluster.tar.gz
 FILENAME3=vmutils-linux-amd64-v$(VERSION).tar.gz
+FILENAME4=victoria-logs-linux-amd64-v$(VMLOG_VERSION)-victorialogs.tar.gz
 
-DIRNAME="$(PACKAGE)-$(VERSION).linux-amd64"
-FILENAME="$(DIRNAME).tar.gz"
 WEB_URL1=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME1)
 WEB_URL2=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME2)
 WEB_URL3=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME3)
+WEB_URL4=https://github.com/$(REPONAME)/releases/download/v$(VMLOG_VERSION)-victorialogs/$(FILENAME4)
 
 
 default: all
@@ -31,6 +33,8 @@ link:
 	@echo curl -SL $(WEB_URL1) -o $(FILENAME1)
 	@echo curl -SL $(WEB_URL2) -o $(FILENAME2)
 	@echo curl -SL $(WEB_URL3) -o $(FILENAME3)
+	@echo curl -SL $(WEB_URL3) -o $(FILENAME4)
+
 
 # get latest release info
 meta:
@@ -42,6 +46,8 @@ download:
 	if [ -f ../tarball/$(FILENAME1) ]; then cp ../tarball/$(FILENAME1) .; else curl -SL $(WEB_URL1) -o $(FILENAME1); fi
 	if [ -f ../tarball/$(FILENAME2) ]; then cp ../tarball/$(FILENAME2) .; else curl -SL $(WEB_URL1) -o $(FILENAME2); fi
 	if [ -f ../tarball/$(FILENAME3) ]; then cp ../tarball/$(FILENAME3) .; else curl -SL $(WEB_URL1) -o $(FILENAME3); fi
+	if [ -f ../tarball/$(FILENAME4) ]; then cp ../tarball/$(FILENAME4) .; else curl -SL $(WEB_URL1) -o $(FILENAME4); fi
+
 
 # extract tarball content to current directory
 extract:
@@ -49,6 +55,7 @@ extract:
 	tar -xf $(FILENAME1)  -C $(PACKAGE)
 	tar -xf $(FILENAME2)  -C $(PACKAGE)
 	tar -xf $(FILENAME3)  -C $(PACKAGE)
+	tar -xf $(FILENAME4)  -C $(PACKAGE)
 
 # remove tarball, build dir, rpm & deb files
 clean:
@@ -58,11 +65,13 @@ clean:
 build: rpm deb
 rpm:
 	nfpm package --config victoria-metrics.yaml         --packager rpm --target ../dist/rpm/
+	nfpm package --config victoria-logs.yaml            --packager rpm --target ../dist/rpm/
 	nfpm package --config victoria-metrics-cluster.yaml --packager rpm --target ../dist/rpm/
 	nfpm package --config victoria-metrics-utils.yaml   --packager rpm --target ../dist/rpm/
 
 deb:
 	nfpm package --config victoria-metrics.yaml         --packager deb --target ../dist/deb/
+	nfpm package --config victoria-logs.yaml            --packager deb --target ../dist/deb/
 	nfpm package --config victoria-metrics-cluster.yaml --packager deb --target ../dist/deb/
 	nfpm package --config victoria-metrics-utils.yaml   --packager deb --target ../dist/deb/
 
