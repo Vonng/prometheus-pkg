@@ -17,10 +17,6 @@ contents:
 
   - src: loki/loki-linux-amd64
     dst: /usr/bin/loki
-  - src: loki/loki-canary-linux-amd64
-    dst: /usr/bin/loki-canary
-  - src: loki/logcli-linux-amd64
-    dst: /usr/bin/logcli
 
   - src: src/loki.yml
     dst: /etc/loki.yml

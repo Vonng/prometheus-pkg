@@ -7,6 +7,7 @@ prometheus-pkg.iml
 tmp/
 
 tarball/*.tar.gz
+tarball/*.zip
 repodata/
 modules.yaml
 
@@ -48,3 +49,10 @@ kafka_exporter/kafka_exporter*.tar.gz
 
 victoria-metrics/victoria-metrics
 victoria-metrics/victoria*.tar.gz
+victoria-metrics/vmutils*.tar.gz
+
+
+loki/*.zip
+
+etcd/etcd
+etcd/etcd*.tar.gz

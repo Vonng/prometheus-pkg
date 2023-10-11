@@ -54,15 +54,17 @@ extract:
 
 # remove tarball, build dir, rpm & deb files
 clean:
-	rm -rf $(PACKAGE) $(FILENAME) $(PACKAGE)*.rpm $(PACKAGE)*.deb
+	rm -rf $(PACKAGE) $(FILENAME) $(PACKAGE)*.rpm $(PACKAGE)*.deb loki*.zip promtail*.zip
 
 # build rpm & deb package
 build: rpm deb
 rpm:
 	nfpm package --config loki-rpm.yaml     --packager rpm --target ../dist/rpm/
+	nfpm package --config logcli.yaml       --packager rpm --target ../dist/rpm/
 	nfpm package --config promtail-rpm.yaml --packager rpm --target ../dist/rpm/
 deb:
 	nfpm package --config loki-deb.yaml     --packager deb --target ../dist/deb/
+	nfpm package --config logcli.yaml       --packager deb --target ../dist/deb/
 	nfpm package --config promtail-deb.yaml --packager deb --target ../dist/deb/
 
 .PHONY: all get link meta download extract clean build rpm deb
