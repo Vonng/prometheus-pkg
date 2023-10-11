@@ -55,4 +55,4 @@ check:
 	ssh sv 'rsync -avz /data/prometheus-pkg/rpm/ rocky8:/tmp/prometheus/'
 	ssh sv 'rsync -avz /data/prometheus-pkg/rpm/ rocky9:/tmp/prometheus/'
 
-.PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter victoria-metrics publish
+.PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter victoria-metrics publish

@@ -10,7 +10,7 @@ REPONAME=oliver006/redis_exporter
 PACKAGE=redis_exporter
 VERSION=1.54.0
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
-DIRNAME=$(PACKAGE)_v$(VERSION)_linux-amd64
+DIRNAME=$(PACKAGE)-v$(VERSION).linux-amd64
 FILENAME=$(DIRNAME).tar.gz
 WEB_URL=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME)
 

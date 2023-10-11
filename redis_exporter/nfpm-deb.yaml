@@ -26,7 +26,6 @@ contents:
     file_info:
       mode: 0755
 
-
   - src: src/default
     dst: /etc/default/redis_exporter
     type: config|noreplace
