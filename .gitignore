@@ -52,6 +52,10 @@ victoria-metrics/victoria*.tar.gz
 victoria-metrics/vmutils*.tar.gz
 
 
+
+pgbackrest_exporter/pgbackrest_exporter
+pgbackrest_exporter/pgbackrest_exporter-0.15.0-linux-x86_64.tar.gz
+
 loki/*.zip
 
 etcd/etcd
