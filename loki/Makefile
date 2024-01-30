@@ -12,8 +12,6 @@ VERSION=2.9.4
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 DIRNAME="$(PACKAGE)-$(VERSION).linux-amd64"
 
-FILENAME="$(DIRNAME).tar.gz"
-
 FILENAME1=logcli-linux-amd64.zip
 FILENAME2=loki-canary-linux-amd64.zip
 FILENAME3=loki-linux-amd64.zip
@@ -32,7 +30,10 @@ get: download extract
 # print download link and download command
 link:
 	@echo $(REPONAME) $(VERSION) on $(RELEASE_PAGE)
-	@echo curl -SL $(WEB_URL) -o $(FILENAME)
+	@echo curl -SL $(WEB_URL1) -o $(FILENAME1); fi
+	@echo curl -SL $(WEB_URL2) -o $(FILENAME2); fi
+	@echo curl -SL $(WEB_URL3) -o $(FILENAME3); fi
+	@echo curl -SL $(WEB_URL4) -o $(FILENAME4); fi
 
 # get latest release info
 meta:
@@ -54,7 +55,7 @@ extract:
 
 # remove tarball, build dir, rpm & deb files
 clean:
-	rm -rf $(PACKAGE) $(FILENAME) $(PACKAGE)*.rpm $(PACKAGE)*.deb loki*.zip promtail*.zip logcli*.zip
+	rm -rf $(PACKAGE) $(PACKAGE)*.rpm $(PACKAGE)*.deb loki*.zip promtail*.zip logcli*.zip
 
 # build rpm & deb package
 build: rpm deb

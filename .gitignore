@@ -51,7 +51,8 @@ victoria-metrics/victoria-metrics
 victoria-metrics/victoria*.tar.gz
 victoria-metrics/vmutils*.tar.gz
 
-
+duckdb/duckdb
+duckdb/duckdb*.zip
 
 pgbackrest_exporter/pgbackrest_exporter
 pgbackrest_exporter/pgbackrest_exporter-0.15.0-linux-x86_64.tar.gz
