@@ -1,14 +1,14 @@
 #==============================================================#
 # File      :   Makefile
 # Ctime     :   2023-10-05
-# Mtime     :   2023-10-05
+# Mtime     :   2024-01-30
 # Desc      :   Makefile shortcuts for rpm building
 # Path      :   Makefile
 # Copyright (C) 2018-2023 Ruohang Feng (rh@vonng.com)
 #==============================================================#
 REPONAME="grafana/loki"
 PACKAGE="loki"
-VERSION=2.9.1
+VERSION=2.9.4
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 DIRNAME="$(PACKAGE)-$(VERSION).linux-amd64"
 
@@ -19,10 +19,10 @@ FILENAME2=loki-canary-linux-amd64.zip
 FILENAME3=loki-linux-amd64.zip
 FILENAME4=promtail-linux-amd64.zip
 
-WEB_URL1=https://github.com/$(REPONAME)/releases/download/$(FILENAME1)
-WEB_URL2=https://github.com/$(REPONAME)/releases/download/$(FILENAME2)
-WEB_URL3=https://github.com/$(REPONAME)/releases/download/$(FILENAME3)
-WEB_URL4=https://github.com/$(REPONAME)/releases/download/$(FILENAME4)
+WEB_URL1=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME1)
+WEB_URL2=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME2)
+WEB_URL3=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME3)
+WEB_URL4=https://github.com/$(REPONAME)/releases/download/v$(VERSION)/$(FILENAME4)
 
 
 default: all
@@ -42,9 +42,9 @@ meta:
 # if already in ../tarball/ , just copy it
 download:
 	if [ -f ../tarball/$(FILENAME1) ]; then cp ../tarball/$(FILENAME1) .; else curl -SL $(WEB_URL1) -o $(FILENAME1); fi
-	if [ -f ../tarball/$(FILENAME2) ]; then cp ../tarball/$(FILENAME2) .; else curl -SL $(WEB_URL1) -o $(FILENAME2); fi
-	if [ -f ../tarball/$(FILENAME3) ]; then cp ../tarball/$(FILENAME3) .; else curl -SL $(WEB_URL1) -o $(FILENAME3); fi
-	if [ -f ../tarball/$(FILENAME4) ]; then cp ../tarball/$(FILENAME4) .; else curl -SL $(WEB_URL1) -o $(FILENAME4); fi
+	if [ -f ../tarball/$(FILENAME2) ]; then cp ../tarball/$(FILENAME2) .; else curl -SL $(WEB_URL2) -o $(FILENAME2); fi
+	if [ -f ../tarball/$(FILENAME3) ]; then cp ../tarball/$(FILENAME3) .; else curl -SL $(WEB_URL3) -o $(FILENAME3); fi
+	if [ -f ../tarball/$(FILENAME4) ]; then cp ../tarball/$(FILENAME4) .; else curl -SL $(WEB_URL4) -o $(FILENAME4); fi
 
 # extract tarball content to current directory
 extract:
@@ -54,7 +54,7 @@ extract:
 
 # remove tarball, build dir, rpm & deb files
 clean:
-	rm -rf $(PACKAGE) $(FILENAME) $(PACKAGE)*.rpm $(PACKAGE)*.deb loki*.zip promtail*.zip
+	rm -rf $(PACKAGE) $(FILENAME) $(PACKAGE)*.rpm $(PACKAGE)*.deb loki*.zip promtail*.zip logcli*.zip
 
 # build rpm & deb package
 build: rpm deb
