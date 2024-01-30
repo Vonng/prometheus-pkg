@@ -1,14 +1,14 @@
 #==============================================================#
 # File      :   Makefile
 # Ctime     :   2023-10-05
-# Mtime     :   2023-10-05
+# Mtime     :   2024-01-30
 # Desc      :   Makefile shortcuts for rpm building
 # Path      :   Makefile
 # Copyright (C) 2018-2023 Ruohang Feng (rh@vonng.com)
 #==============================================================#
 REPONAME="gen2brain/keepalived_exporter"
 PACKAGE="keepalived_exporter"
-VERSION=0.5.0
+VERSION=0.7.0
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 DIRNAME="$(PACKAGE)-$(VERSION)-amd64"
 FILENAME="$(DIRNAME).tar.gz"
