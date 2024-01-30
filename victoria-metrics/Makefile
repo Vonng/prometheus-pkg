@@ -8,8 +8,8 @@
 #==============================================================#
 REPONAME=VictoriaMetrics/VictoriaMetrics
 PACKAGE=victoria-metrics
-VERSION=1.94.0
-VMLOG_VERSION=0.4.1
+VERSION=1.96.0
+VMLOG_VERSION=0.4.2
 
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 FILENAME1=victoria-metrics-linux-amd64-v$(VERSION).tar.gz
@@ -44,9 +44,9 @@ meta:
 # if already in ../tarball/ , just copy it
 download:
 	if [ -f ../tarball/$(FILENAME1) ]; then cp ../tarball/$(FILENAME1) .; else curl -SL $(WEB_URL1) -o $(FILENAME1); fi
-	if [ -f ../tarball/$(FILENAME2) ]; then cp ../tarball/$(FILENAME2) .; else curl -SL $(WEB_URL1) -o $(FILENAME2); fi
-	if [ -f ../tarball/$(FILENAME3) ]; then cp ../tarball/$(FILENAME3) .; else curl -SL $(WEB_URL1) -o $(FILENAME3); fi
-	if [ -f ../tarball/$(FILENAME4) ]; then cp ../tarball/$(FILENAME4) .; else curl -SL $(WEB_URL1) -o $(FILENAME4); fi
+	if [ -f ../tarball/$(FILENAME2) ]; then cp ../tarball/$(FILENAME2) .; else curl -SL $(WEB_URL2) -o $(FILENAME2); fi
+	if [ -f ../tarball/$(FILENAME3) ]; then cp ../tarball/$(FILENAME3) .; else curl -SL $(WEB_URL3) -o $(FILENAME3); fi
+	if [ -f ../tarball/$(FILENAME4) ]; then cp ../tarball/$(FILENAME4) .; else curl -SL $(WEB_URL4) -o $(FILENAME4); fi
 
 
 # extract tarball content to current directory
@@ -59,7 +59,7 @@ extract:
 
 # remove tarball, build dir, rpm & deb files
 clean:
-	rm -rf $(PACKAGE) $(FILENAME1) $(FILENAME2) $(FILENAME3)
+	rm -rf $(PACKAGE) $(FILENAME1) $(FILENAME2) $(FILENAME3) $(FILENAME4)
 
 # build rpm & deb package
 build: rpm deb
