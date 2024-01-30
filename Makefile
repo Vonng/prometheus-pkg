@@ -9,8 +9,10 @@
 
 
 default: build
-build: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter victoria-metrics
+build: etcd prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter victoria-metrics loki
 
+etcd:
+	cd etcd && make
 prometheus:
 	cd prometheus && make
 alertmanager:
@@ -35,8 +37,12 @@ pg_exporter:
 	cd pg_exporter && make
 redis_exporter:
 	cd redis_exporter && make
+pgbackrest_exporter:
+	cd pgbackrest_exporter && make
 victoria-metrics:
 	cd victoria-metrics && make
+loki:
+	cd loki && make
 publish:
 	# package_cloud push pigsty/prometheus/el/8 dist/rpm/*.rpm
 	package_cloud push pigsty/prometheus/ubuntu/jammy dist/deb/*.deb
@@ -55,4 +61,4 @@ check:
 	ssh sv 'rsync -avz /data/prometheus-pkg/rpm/ rocky8:/tmp/prometheus/'
 	ssh sv 'rsync -avz /data/prometheus-pkg/rpm/ rocky9:/tmp/prometheus/'
 
-.PHONY: prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter victoria-metrics publish
+.PHONY: etcd prometheus alertmanager pushgateway blackbox_exporter node_exporter nginx_exporter keepalived_exporter mysqld_exporter mongodb_exporter kafka_exporter pg_exporter redis_exporter pgbackrest_exporter victoria-metrics loki publish

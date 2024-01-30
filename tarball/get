@@ -84,15 +84,16 @@ download_file https://github.com/gen2brain/keepalived_exporter/releases/download
 download_file https://github.com/oliver006/redis_exporter/releases/download/v1.54.0/redis_exporter-v1.54.0.linux-amd64.tar.gz                           ${TARBALL_DIR}/redis_exporter-v1.54.0.linux-amd64.tar.gz
 
 
-#v_prometheus=2.47.1           https://github.com/prometheus/prometheus/releases/download/v${v_prometheus}/prometheus-${v_prometheus}.freebsd-amd64.tar.gz
+#v_prometheus=2.49.1           https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz
 #v_alertmanager=0.26.0         https://github.com/prometheus/alertmanager/releases/download/v0.26.0/alertmanager-0.26.0.linux-amd64.tar.gz
-#v_pushgateway=1.6.2           https://github.com/prometheus/pushgateway/releases/download/v1.6.2/pushgateway-1.6.2.linux-amd64.tar.gz
+#v_pushgateway=1.7.0           https://github.com/prometheus/pushgateway/releases/download/v1.7.0/pushgateway-1.7.0.linux-amd64.tar.gz
 #v_blackbox_exporter=0.24.0    https://github.com/prometheus/blackbox_exporter/releases/download/v0.24.0/blackbox_exporter-0.24.0.linux-amd64.tar.gz
-#v_node_exporter=1.6.1         https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
-#v_nginx_exporter=0.11.0       https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.11.0/nginx-prometheus-exporter_0.11.0_linux_amd64.tar.gz
-#v_pg_exporter=0.5.0           https://github.com/Vonng/pg_exporter/releases/download/v0.5.0/pg_exporter_v0.5.0_linux-amd64.tar.gz
-#v_mysqld_exporter=0.15.0      https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.0/mysqld_exporter-0.15.0.linux-amd64.tar.gz
+#v_node_exporter=1.7.0         https://github.com/prometheus/node_exporter/releases/download/v1.7.0/node_exporter-1.7.0.linux-amd64.tar.gz
+#v_nginx_exporter=1.1.0        https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v1.1.0/nginx-prometheus-exporter_1.1.0_linux_amd64.tar.gz
+#v_pg_exporter=0.6.1           https://github.com/Vonng/pg_exporter/releases/download/v0.6.1/pg_exporter-v0.6.1.linux-amd64.tar.gz
+#v_mysqld_exporter=0.15.1      https://github.com/prometheus/mysqld_exporter/releases/download/v0.15.1/mysqld_exporter-0.15.1.linux-amd64.tar.gz
 #v_kafka_exporter=1.7.0        https://github.com/danielqsj/kafka_exporter/releases/download/v1.7.0/kafka_exporter-1.7.0.linux-amd64.tar.gz
-#v_mongodb_exporter=0.39.0     https://github.com/percona/mongodb_exporter/releases/download/v0.39.0/mongodb_exporter-0.39.0.linux-amd64.tar.gz
-#v_keepalived_exporter=0.5.0   https://github.com/gen2brain/keepalived_exporter/releases/download/0.5.0/keepalived_exporter-0.5.0-amd64.tar.gz
-
+#v_mongodb_exporter=0.40.0     https://github.com/percona/mongodb_exporter/releases/download/v0.40.0/mongodb_exporter-0.40.0.linux-amd64.tar.gz
+#v_keepalived_exporter=0.7.0   https://github.com/gen2brain/keepalived_exporter/releases/download/v0.7.0/keepalived_exporter-0.7.0-amd64.tar.gz
+#v_redis_exporter=1.57.0       https://github.com/oliver006/redis_exporter/releases/download/v1.57.0/redis_exporter-v1.57.0.linux-amd64.tar.gz
+#v_pgbackrest_exporter=0.16.2  https://github.com/woblerr/pgbackrest_exporter/releases/download/v0.16.2/pgbackrest_exporter-0.16.2-linux-x86_64.tar.gz
