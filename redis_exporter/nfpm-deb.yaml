@@ -1,13 +1,10 @@
 name: "redis-exporter"
 arch: "amd64"
 platform: "linux"
-version: "v1.54.0"
+version: "v1.57.0"
 version_schema: semver
 description: |
-  Prometheus exporter for PostgreSQL / Pgbouncer server metrics.
-  Supported version: Postgres9.4 - 16+ & Pgbouncer 1.8 - 1.20+
-  Part of Project Pigsty -- Battery Included PostgreSQL Distribution
-  with ultimate observability: https://demo.pigsty.cc
+  Prometheus Exporter for Redis Metrics. Supports Redis 2.x, 3.x, 4.x, 5.x, 6.x, and 7.x
 
 maintainer: Ruohang Feng <rh@vonng.com>
 vendor: "Pigsty"
