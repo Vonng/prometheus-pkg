@@ -6,9 +6,9 @@
 # Path      :   Makefile
 # Copyright (C) 2018-2023 Ruohang Feng (rh@vonng.com)
 #==============================================================#
-REPONAME=prometheus/pgbackrest_exporter
+REPONAME=woblerr/pgbackrest_exporter
 PACKAGE=pgbackrest_exporter
-VERSION=0.16.2
+VERSION=0.17.0
 RELEASE_PAGE=https://github.com/$(REPONAME)/releases/v$(VERSION)
 DIRNAME=$(PACKAGE)-$(VERSION)-linux-x86_64
 FILENAME=$(DIRNAME).tar.gz

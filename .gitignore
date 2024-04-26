@@ -55,7 +55,7 @@ duckdb/duckdb
 duckdb/duckdb*.zip
 
 pgbackrest_exporter/pgbackrest_exporter
-pgbackrest_exporter/pgbackrest_exporter-0.15.0-linux-x86_64.tar.gz
+pgbackrest_exporter/pgbackrest_exporter*.tar.gz
 
 loki/*.zip
 

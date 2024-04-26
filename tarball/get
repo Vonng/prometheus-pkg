@@ -41,6 +41,14 @@ function log_input() { printf "[${__CM} IN ${__CN}] ${__CM}$*\n=> ${__CN}"; }
 function log_hint()  { printf "${__CB}$*${__CN}\n"; }
 #==============================================================#
 
+function get_file_size(){
+  local file=$1
+  if [[ -f ${file} ]]; then
+    echo $(stat -c %s ${file})
+  else
+    echo 0
+  fi
+}
 
 # download file from url, if file already exists with same size, skip download
 function download_file(){
